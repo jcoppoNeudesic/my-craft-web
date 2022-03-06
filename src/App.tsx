@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+import RawItemsList from "./components/RawItemsList";
+import "./App.css";
+
+const freeItems = ["Copper Ore", "Crude Oil", "Coal", "Brine", "Sand", "Wood"];
+
+interface Item {
+  name: string;
+  qty: number;
+}
+
+const App: React.FC = () => {
+  const [myItems, setMyIems] = useState<Item[]>([]);
+
+  const addtoMyItems = (itemName: string) => {
+    const myItemsCopy = myItems.slice();
+    const existingItem = myItemsCopy.slice().find((item) => item.name == itemName);
+
+    if (existingItem) {
+      existingItem.qty += 1;
+      setMyIems(myItemsCopy);
+      return;
+    }
+
+    const newItem: Item = {
+      name: itemName,
+      qty: 1,
+    };
+
+    setMyIems([...myItems, newItem]);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>MyCraft</h2>
       </header>
+      <div>
+        <b>My Items:</b>{" "}
+        {myItems.map((item, idx) => (
+          <div key={idx}>
+            {item.name} - {item.qty}
+          </div>
+        ))}
+      </div>
+      <RawItemsList items={freeItems} itemSelected={addtoMyItems} />
     </div>
   );
-}
+};
 
 export default App;
