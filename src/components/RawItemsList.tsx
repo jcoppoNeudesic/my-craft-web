@@ -1,17 +1,19 @@
-import React from "react";
+import React, { FC } from "react";
 
-type Props = {
-  items: string[];
-  itemSelected: (name: string) => void;
-};
+import rawItems from "../data/rawItems.json";
+import { AppContext } from "../providers/AppProvider";
 
-const RawItemsList: React.FC<Props> = ({ items, itemSelected }: Props) => {
+const rawItemList = rawItems.allItems;
+
+const RawItemsList: FC = () => {
+  const { addToUserItems } = React.useContext(AppContext);
+
   return (
     <div>
       <h4>Raw Items - click to take one</h4>
-      {items.map((item, idx) => (
+      {rawItemList.map((itemName, idx) => (
         <div key={idx}>
-          <button onClick={() => itemSelected(item)}>{item}</button>
+          <button onClick={() => addToUserItems(itemName)}>{itemName}</button>
         </div>
       ))}
     </div>
