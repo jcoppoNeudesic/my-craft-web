@@ -16,13 +16,13 @@ const AppNavigator: FC = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/my-items">My Items ({userItemCount()})</Link>
-            </li>
-            <li>
               <Link to="/explore">Explore</Link>
             </li>
             <li>
               <Link to="/crafting">Crafting</Link>
+            </li>
+            <li>
+              <Link to="/my-items">My Items ({userItemCount()})</Link>
             </li>
           </ul>
         </nav>

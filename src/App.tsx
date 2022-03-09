@@ -14,9 +14,9 @@ const App: FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<AppNavigator />}>
-            <Route path="my-items" element={<MyItemsList />} />
             <Route path="explore" element={<RawItemsList />} />
             <Route path="crafting" element={<Crafting />} />
+            <Route path="my-items" element={<MyItemsList />} />
           </Route>
         </Routes>
       </BrowserRouter>
