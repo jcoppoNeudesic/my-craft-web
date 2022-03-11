@@ -5,7 +5,7 @@ import { AppProvider } from "./providers/AppProvider";
 import AppNavigator from "./components/AppNavigator";
 import MyItemsList from "./components/MyItemsList";
 import RawItemsList from "./components/RawItemsList";
-import Crafting from "./components/Crafting";
+import CraftingPage from "./components/CraftingPage";
 import "./App.css";
 
 const App: FC = () => {
@@ -15,7 +15,7 @@ const App: FC = () => {
         <Routes>
           <Route path="/" element={<AppNavigator />}>
             <Route path="explore" element={<RawItemsList />} />
-            <Route path="crafting" element={<Crafting />} />
+            <Route path="crafting" element={<CraftingPage />} />
             <Route path="my-items" element={<MyItemsList />} />
           </Route>
         </Routes>

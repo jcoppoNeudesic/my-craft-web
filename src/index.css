@@ -4,7 +4,7 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://img.freepik.com/free-photo/grunge-old-vintage-retro-paper-texture-background_47840-948.jpg?w=1480");
+  /* background-image: url("https://img.freepik.com/free-photo/grunge-old-vintage-retro-paper-texture-background_47840-948.jpg?w=1480"); */
   background-size: cover;
 }
 
