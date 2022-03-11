@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  width: 180px;
+}
+
+.crafting-table {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.process-picker {
+  margin-bottom: 10px;
+}
+
+.run-button {
+  margin-bottom: 10px;
+}
