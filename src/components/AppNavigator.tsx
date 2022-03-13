@@ -10,19 +10,19 @@ const AppNavigator: FC = () => {
   return (
     <div className="App">
       <header>
-        <h2>MyCraft</h2>
+        <h2 className="header">MyCraft</h2>
       </header>
       <div>
         <nav>
           <ul>
             <li>
+              <Link to="/my-items">My Items ({userItemCount()})</Link>
+            </li>
+            <li>
               <Link to="/explore">Explore</Link>
             </li>
             <li>
               <Link to="/crafting">Crafting</Link>
-            </li>
-            <li>
-              <Link to="/my-items">My Items ({userItemCount()})</Link>
             </li>
           </ul>
         </nav>

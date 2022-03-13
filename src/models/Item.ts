@@ -1,5 +1,7 @@
+import ItemType from "../data/ItemType";
+
 interface Item {
-  name: string;
+  type: ItemType;
   qty: number;
 }
 
