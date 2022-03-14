@@ -15,8 +15,8 @@ const App: FC = () => {
         <Routes>
           <Route path="/" element={<AppNavigator />}>
             <Route path="explore" element={<RawItemsList />} />
-            <Route path="crafting" element={<CraftingPage />} />
             <Route path="my-items" element={<MyItemsList />} />
+            <Route path="crafting" element={<CraftingPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

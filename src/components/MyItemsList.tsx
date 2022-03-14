@@ -15,7 +15,7 @@ const RawItemsList: FC = () => {
       <h4>My Items</h4>
       {user.items?.map((item: Item, idx: number) => (
         <div key={idx}>
-          {item.name} - {item.qty}
+          {item.type} - {item.qty}
         </div>
       ))}
     </>
